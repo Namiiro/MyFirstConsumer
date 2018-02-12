@@ -10,6 +10,13 @@ namespace MyFirstConsumer
     {
         static void Main(string[] args)
         {
+
+            using (var client = new ServiceReference1.Service1Client())
+            {
+                Console.WriteLine(client.GetMyName());
+            }
+
+            Console.ReadLine();
         }
     }
 }
