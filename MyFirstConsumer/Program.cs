@@ -12,10 +12,11 @@ namespace MyFirstConsumer
         {
 
             using (var client = new ServiceReference1.Service1Client())
+            using (var client2 = new ServiceReference2.Service1Client())
             {
                 Console.WriteLine(client.GetMyName());
-                Console.WriteLine(client.GetMyEmail());
-                
+                Console.WriteLine(client2.GetMyEmail());
+
             }
 
             Console.ReadLine();
